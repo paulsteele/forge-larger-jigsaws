@@ -66,8 +66,11 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, 'jigsaw-expander.refmap.json'
-    config 'jigsaw-expander.mixins.json'
+    add sourceSets.main, "jigsaw-expander.refmap.json"
+    config "jigsaw.expander.mixins.json"
+
+    debug.verbose = true
+    debug.export = true
 }
 
 tasks.named('processResources', ProcessResources).configure {

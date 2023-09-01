@@ -2,8 +2,9 @@
   "required": true,
   "package": "com.jigsaw.expander.mixins",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "jigsaw-expander.refmap.json",
+  "refmap": "jigsaw.expander.refmap.json",
   "mixins": [
+    "JigsawStructureAccessor",
     "JigsawStructureMixin"
   ],
   "minVersion": "0.8",
