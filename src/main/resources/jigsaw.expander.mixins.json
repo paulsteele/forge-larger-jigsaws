@@ -4,8 +4,12 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "jigsaw.expander.refmap.json",
   "mixins": [
+    "ChunkGenerator",
+    "ChunkStatusMixin",
+    "JigsawPlacementMixin",
     "JigsawStructureAccessor",
-    "JigsawStructureMixin"
+    "JigsawStructureMixin",
+    "ServerChunkCacheMixin"
   ],
   "minVersion": "0.8",
   "injectors": {

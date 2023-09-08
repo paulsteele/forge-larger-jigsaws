@@ -2,11 +2,9 @@ package com.jigsaw.expander.mixins;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
-import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ExtraCodecs;
-import net.minecraft.world.level.block.entity.StructureBlockEntity;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.heightproviders.HeightProvider;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
@@ -15,12 +13,6 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Constant;
-import org.spongepowered.asm.mixin.injection.ModifyConstant;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
-
-import java.util.function.Function;
 
 import static com.jigsaw.expander.JigsawMod.LOGGER;
 import static net.minecraft.world.level.levelgen.structure.Structure.settingsCodec;
@@ -29,7 +21,7 @@ import static net.minecraft.world.level.levelgen.structure.Structure.settingsCod
 public abstract class JigsawStructureMixin {
     @Shadow
     @Final
-    public static final int MAX_TOTAL_STRUCTURE_RANGE = 500;
+    public static final int MAX_TOTAL_STRUCTURE_RANGE = 512;
     /**
      * @author paul
      * @reason because that's the point of the mod
@@ -55,7 +47,7 @@ public abstract class JigsawStructureMixin {
             return ((JigsawStructureAccessor)(Object) obj).getUseExpansionHack();
         }), Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter((obj) -> {
             return ((JigsawStructureAccessor)(Object) obj).getProjectStartToHeightmap();
-        }), Codec.intRange(1, 500).fieldOf("max_distance_from_center").forGetter((obj) -> {
+        }), Codec.intRange(1, 512).fieldOf("max_distance_from_center").forGetter((obj) -> {
             return ((JigsawStructureAccessor)(Object) obj).getMaxDistanceFromCenter();
         })).apply(p_227640_, JigsawStructure::new);
     }), JigsawStructureMixin::verifyRange).codec();
