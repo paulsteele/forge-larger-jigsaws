@@ -1,4 +1,4 @@
-package com.jigsaw.expander.mixins;
+package com.bmp.jigsaw.expander.mixins;
 
 import net.minecraft.core.Registry;
 import net.minecraft.util.RandomSource;
