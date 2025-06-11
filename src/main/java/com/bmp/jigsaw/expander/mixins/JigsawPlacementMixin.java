@@ -21,9 +21,9 @@ import java.util.List;
 @Mixin(JigsawPlacement.class)
 public class JigsawPlacementMixin {
 
-    @ModifyVariable(method = "addPieces(Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/core/BlockPos;ZLjava/util/Optional;I)Ljava/util/Optional;", at = @At("HEAD"), index = 7, argsOnly = true)
-    private static int updateGeneration(int generationLimit){
-        return 512;
-    }
+//    @ModifyVariable(method = "addPieces(Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/core/BlockPos;ZLjava/util/Optional;I)Ljava/util/Optional;", at = @At("HEAD"), index = 7, argsOnly = true)
+//    private static int updateGeneration(int generationLimit){
+//        return 512;
+//    }
 
 }
