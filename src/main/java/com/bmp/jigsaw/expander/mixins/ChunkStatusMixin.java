@@ -14,7 +14,7 @@ import static net.minecraft.world.level.chunk.status.ChunkStatus.*;
 
 @Mixin(ChunkStatus.class)
 public class ChunkStatusMixin {
-//
+
 //    @ModifyVariable(method = "registerSimple", at = @At("HEAD"), argsOnly = true, index = 2)
 //    private static int updateChunkDistance(int originalDistance)
 //    {
@@ -23,7 +23,7 @@ public class ChunkStatusMixin {
 //        }
 //        return originalDistance;
 //    }
-//
+
 //    @ModifyVariable(method = "register*", at = @At("HEAD"), argsOnly = true, index = 2)
 //    private static int updateChunkDistanceThing(int originalDistance)
 //    {
