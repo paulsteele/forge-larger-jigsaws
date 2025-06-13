@@ -39,8 +39,4 @@ public interface JigsawStructureAccessor {
     DimensionPadding getDimensionPadding();
     @Accessor
     LiquidSettings getLiquidSettings();
-    @Invoker("verifyRange")
-    static DataResult<JigsawStructure> verifyRange(JigsawStructure p_286886_) {
-        throw new AssertionError();
-    }
 }

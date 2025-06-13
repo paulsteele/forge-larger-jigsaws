@@ -19,7 +19,6 @@ import org.spongepowered.asm.mixin.Shadow;
 
 import java.util.List;
 
-import static com.bmp.jigsaw.expander.JigsawMod.LOGGER;
 import static net.minecraft.world.level.levelgen.structure.Structure.settingsCodec;
 import static net.minecraft.world.level.levelgen.structure.structures.JigsawStructure.DEFAULT_DIMENSION_PADDING;
 import static net.minecraft.world.level.levelgen.structure.structures.JigsawStructure.DEFAULT_LIQUID_SETTINGS;

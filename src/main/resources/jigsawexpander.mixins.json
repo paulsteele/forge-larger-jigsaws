@@ -4,8 +4,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "jigsawexpander.refmap.json",
   "mixins": [
-    "ChunkGenerator",
-    "ChunkStatusMixin",
+    "ChunkGeneratorMixin",
+    "ChunkStepMixin",
     "JigsawPlacementMixin",
     "JigsawStructureAccessor",
     "JigsawStructureMixin",
